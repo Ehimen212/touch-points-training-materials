@@ -1,0 +1,6 @@
+gcloud compute instances create-with-container apache-cassandra --zone=us-central1-a --tags=cql-server --machine-type=n1-standard-1 --container-image=bitnami/cassandra:latest
+
+gcloud compute firewall-rules create allow-cql --allow=tcp:9042 --source-ranges=0.0.0.0/0 --target-tags=cql-server
+
+
+gcloud compute instances create-with-container dse-server --zone=us-central1-a --container-image=registry.hub.docker.com/datastax/dse-serer:6.7.7 --machine-type=n1-standard-1  --container-env=DS_LICENSE=accept  --container-restart-policy=always  --container-mount-host-path=mount-path=/config,host-path=/tmp/dse-config,mode=rw --tags=cql-server
