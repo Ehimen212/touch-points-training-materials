@@ -1,4 +1,4 @@
-# touch-points-training-materials
+# Touch Points Training Materials
 Repository for GADS 2020 Peer Learning Group training
 
 
