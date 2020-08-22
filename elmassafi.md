@@ -2,29 +2,31 @@
 
 ## Kubernets Basics
 
-1.  What is Kubernetes?
+1. What is Kubernetes?
+   
+2. Components of Kubernetes<sup>1</sup>.
 
-2.  Components of Kubernetes<sup>1</sup>.
+   ![image of components](images/components-of-kubernetes.png)<sup>3</sup>
 
-    ![image of components](images/components-of-kubernetes.png)<sup>3</sup>
+3. Controllers<sup>2</sup>:
+   - What are they?
+   - Types:
+     - ReplicaSets
+     - Deployments<sup>\*</sup>
+     - StatefulSets<sup>\*</sup>
+     - DaemonSets<sup>\*</sup>
+     - Jobs
+     - CronJob
+     - Garbage Collection
+     - TTL Controller or Finished Resources
+     - ReplicationController
 
-3.  Controllers<sup>2</sup>:
-
-    - What are they?
-    - Types:
-      - Deployments<sup>\*</sup>
-      - Statefulsets<sup>\*</sup>
-      - DaemonSets<sup>\*</sup>
-      - Replicasets
-      - Jobs
-      - Garbage Collection
-      - TTL Controller or Finished Resources
-      - CronJob
-      - ReplicationController
-
-4.  Services and Ingress
-
-    - Ingress:
+4. Services and Ingress:
+   - Services:
+     - ClusterIP 
+     - NodePort
+     - LoadBalancer
+    - Ingress Resource:
 
       ```
         internet
